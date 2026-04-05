@@ -1,6 +1,6 @@
 // ============================================================
 // ============================================================
-NodeBanDoc* createNodeBanDoc(BanDoc x)
+NodeBanDoc* createNodeBanDoc(ItemType x)
 {
     NodeBanDoc* p = new NodeBanDoc;
     if (p == NULL)
@@ -32,7 +32,7 @@ int insertTail(DanhSachBanDoc &ds, NodeBanDoc* p)
 
 // ============================================================
 // ============================================================
-void showBanDoc(BanDoc x)
+void showBanDoc(ItemType x)
 {
     printf("%-15s %-30s %-10d ",
            x.mathe, x.hoTen, x.namSinh);
@@ -205,7 +205,7 @@ void findSach_ByTacGia(DanhSachSach ds, char tacgia[])
 // ============================================================
 void sortBanDoc_ByTen(DanhSachBanDoc &ds)
 {
-    if (ds.head == NULL) return;  // ? thêm ki?m tra r?ng
+    if (ds.head == NULL) return;  // ? thÃªm ki?m tra r?ng
 
     int swapped;
     do
